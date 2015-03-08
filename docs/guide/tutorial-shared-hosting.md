@@ -71,7 +71,7 @@ frontend
 ...
 ```
 
-`www` will be our frontend directory so move the contents of `frontend/web` into it. Move the contents of `backend/web` into `www/admin`. You will also need to change the `bootstrap.php` file in the `common/config` folder, setting the frontend alias to public_html.
+`www` will be our frontend directory so move the contents of `frontend/web` into it. Move the contents of `backend/web` into `www/admin`. You will also need to change the `bootstrap.php` file in the `common/config` folder, setting the frontend alias to `www` and the backend alias to `www/admin`. You will also need to change index.php and index-dev.php in what is now `www/admin/web`, adding another level, since the admin folder is now one level deeper in the file structure, e.g., `require(__DIR__ . '/../../vendor/autoload.php')` becomes `require(__DIR__ . '/../../../vendor/autoload.php')`.
 
 ### Separate sessions and cookies
 
