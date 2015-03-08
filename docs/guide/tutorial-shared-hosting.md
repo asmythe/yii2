@@ -1,7 +1,7 @@
 Shared Hosting Environment
 ==========================
 
-Shared hosting environments are often quite limited about configuration and directory structure. Still in most cases you can run Yii 2.0 on a shared hosting environment with a few adjustements.
+Shared hosting environments are often quite limited about configuration and directory structure. Still in most cases you can run Yii 2.0 on a shared hosting environment with a few adjustments.
 
 Deploying a basic application
 ---------------------------
