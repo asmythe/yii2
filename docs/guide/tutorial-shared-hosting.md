@@ -24,7 +24,7 @@ The webroot in our basic application template is named `web`. Before uploading t
 
 ### FTP root directory is writeable
 
-If you can write to the root level directory i.e. where `config`, `logs` and `www` are, then upload upload `assets`, `commands` etc. as is to the root level directory.
+If you can write to the root level directory i.e. where `config`, `logs` and `www` are, then upload `assets`, `commands` etc. as is to the root level directory.
 
 ### Add extras for webserver <span id="add-extras-for-webserver"></span>
 
@@ -71,12 +71,11 @@ frontend
 ...
 ```
 
-`www` will be our frontend directory so move the contents of `frontend/web` into it. Move the contents of `backend/web` into `www/admin`. In each case you will need to adjust the paths in `index.php` and `index-test.php`.
+`www` will be our frontend directory so move the contents of `frontend/web` into it. Move the contents of `backend/web` into `www/admin`. You will also need to change the `bootstrap.php` file in the `common/config` folder, setting the frontend alias to public_html.
 
 ### Separate sessions and cookies
 
-Originally the backend and frontend are intended to run at different domains. When we’re moving it all to the same domain the frontend and backend will be sharing the same cookies, creating a clash. It order to fix it, adjust backend application config
-`backend/config/main.php` as follows:
+Originally the backend and frontend are intended to run at different domains. When we’re moving it all to the same domain the frontend and backend will be sharing the same cookies, creating a clash. It order to fix it, adjust the backend application config `backend/config/main.php` as follows:
 
 ```php
 'components' => [
